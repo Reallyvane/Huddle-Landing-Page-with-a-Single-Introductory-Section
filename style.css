@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "open sans", sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: var(--violet);
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  margin: 60px 80px 0px 80px;
+}
+
+header {
+  margin-bottom: 80px;
+}
+
+header img {
+  width: 200px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b";
+  grid-gap: 20px;
+}
+
+.illustration {
+  grid-area: a;
+}
+
+.content {
+  grid-area: b;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+p {
+  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: white;
+  margin-top: 30px;
+  display: flex;
+  flex-basis: 100%;
+}
+
+button {
+  width: 180px;
+  height: 55px;
+  font-size: 1.2em;
+  border-radius: 25px;
+  border-style: none;
+  background-color: white;
+  color: var(--violet);
+  margin-top: 25px;
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+}
+
+i {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px 11px;
+  margin-left: 20px;
+}
+
+i:hover {
+  color: var(--soft-magenta);
+  border: 1px solid var(--soft-magenta);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url(./images/bg-mobile.svg);
+    background-repeat: no-repeat;
+  }
+  main {
+    margin: 30px 40px 30px 40px;
+  }
+  header {
+    margin-bottom: 50px;
+  }
+  header img {
+    width: 130px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b";
+    width: 100%;
+  }
+  .illustration {
+    grid-area: a;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .illustration img {
+    width: 100%;
+  }
+  .content {
+    grid-area: b;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.97em;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+}
